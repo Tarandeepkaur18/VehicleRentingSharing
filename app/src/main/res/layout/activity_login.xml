@@ -1,47 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".LoginActivity">
-    <ImageView
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".LoginActivity">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvhead"
+            android:text="Vehicle"
+            android:fontFamily="sans-serif-black"
+            android:textSize="70dp"
+            android:gravity="center"/>
+        <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/gif"
-        android:src="@drawable/car">
+        android:src="@drawable/car" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:hint="Email or phone number"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
-    </ImageView>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/email"
-        android:hint=" Enter Email">
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:hint="Password"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
-    </EditText>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/password"
-        android:hint=" Enter Password">
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgotpassword"
+            android:text=" Forgot Password?"
+            android:textSize="20dp"
+            android:gravity="right"
+            android:textColorLink="@color/cardview_light_background">
 
-    </EditText>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnlogin"
-        android:text="Log In">
+        </TextView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:id="@+id/btn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
-    </Button>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv"
-        android:text="Already Have An Account?">
+        </Button>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:id="@+id/dont"
+            android:textSize="20dp">
 
-    </TextView>
+        </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Signup"
+                android:id="@+id/signup">
 
-
-
-</LinearLayout>
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
